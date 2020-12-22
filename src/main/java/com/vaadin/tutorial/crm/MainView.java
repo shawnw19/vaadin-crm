@@ -67,7 +67,6 @@ public class MainView extends VerticalLayout {
         add(new H1("Hello world"), textField, button);
         add(new H2("An example."), textField, button);
 
-
     }
 
 }
