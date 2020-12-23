@@ -67,6 +67,11 @@
 
     <dependencies>
         <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+            <version>2.4.1</version>
+        </dependency>
+        <dependency>
             <groupId>com.vaadin</groupId>
             <!-- Replace artifactId with vaadin-core to use only free components -->
             <artifactId>vaadin</artifactId>
@@ -131,6 +136,11 @@
             <version>3.8.1</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <scope>runtime</scope>
+        </dependency>
     </dependencies>
 
     <build>
@@ -169,7 +179,7 @@
 
     <profiles>
         <profile>
-            <!-- Production mode is activated using -Pproduction -->
+            <!-- Production mode is activated using -Production -->
             <id>production</id>
             <properties>
                 <vaadin.productionMode>true</vaadin.productionMode>
@@ -188,7 +198,7 @@
                         <groupId>org.springframework.boot</groupId>
                         <artifactId>spring-boot-maven-plugin</artifactId>
                         <configuration>
-                            <jvmArguments>-Dvaadin.productionMode</jvmArguments>
+                            <jvmArguments>-Vaadin.productionMode</jvmArguments>
                         </configuration>
                     </plugin>
                     <plugin>
