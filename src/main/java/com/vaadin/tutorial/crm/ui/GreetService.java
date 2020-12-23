@@ -1,8 +1,8 @@
-package com.vaadin.tutorial.crm;
-
-import java.io.Serializable;
+package com.vaadin.tutorial.crm.ui;
 
 import org.springframework.stereotype.Service;
+
+import java.io.Serializable;
 
 @Service
 public class GreetService implements Serializable {
